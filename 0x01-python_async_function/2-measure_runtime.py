@@ -14,11 +14,7 @@ def measure_time(n: int, max_delay: int) -> float:
     This function measures the runtime of the concurrent coroutines
     """
     start = time.time()
-
-
     asyncio.run(wait_n(n, max_delay))
-
-    
     end = time.time()
     total_runtime = end - start
     average_runtime = total_runtime/n
